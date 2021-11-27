@@ -31,8 +31,8 @@ mybatis:
 ##注册中心配置
 eureka:
   client:
-    register-with-eureka: false
-    fetchRegistry: false
+    register-with-eureka: true
+    fetchRegistry: true
     server:
       waitTimeInMsWhenSyncEmpty: 0
     serviceUrl:
