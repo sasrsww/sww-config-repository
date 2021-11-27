@@ -1,0 +1,39 @@
+userName: shenwenwen
+
+spring:
+  #redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 11
+    timeout: 3000
+    pool:
+      max-active: 32
+      max-idle: 16
+      max-wait: 3000
+      min-idle: 8
+  ##mysql数据库连接池配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: shenwenwen
+      url: jdbc:mysql://127.0.0.1:3306/pinma_msx?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+
+
+#mybatis配置
+mybatis:
+  configLocation: classpath:mybatis/mybatis-config.xml
+  mapperLocations: classpath:mybatis/sqlmap/*.xml
+
+##注册中心配置
+eureka:
+  client:
+    register-with-eureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8000/eureka/
